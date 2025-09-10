@@ -1,10 +1,18 @@
-# Nuxt Minimal Starter
+# Рейтинг таргетологов — Nuxt 4 SPA
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+SPA на Nuxt 4 + TypeScript (strict), Pinia, Tailwind v4.
 
-## Setup
+## Переменные окружения
 
-Make sure to install dependencies:
+Создайте файл `.env` и задайте:
+
+```
+PUBLIC_API_BASE_URL=https://staging.example.com
+```
+
+## Установка
+
+Установите зависимости:
 
 ```bash
 # npm
@@ -22,7 +30,7 @@ bun install
 
 ## Development Server
 
-Start the development server on `http://localhost:3000`:
+Старт dev-сервера на `http://localhost:3000`:
 
 ```bash
 # npm
@@ -40,7 +48,7 @@ bun run dev
 
 ## Production
 
-Build the application for production:
+Сборка приложения:
 
 ```bash
 # npm
@@ -56,7 +64,7 @@ yarn build
 bun run build
 ```
 
-Locally preview production build:
+Локальный preview production-сборки:
 
 ```bash
 # npm
@@ -72,4 +80,16 @@ yarn preview
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Деплой (Nginx)
+
+History fallback и кэш:
+
+```
+location / {
+  try_files $uri /index.html;
+}
+location /assets/ {
+  expires 30d;
+  add_header Cache-Control "public, max-age=2592000, immutable";
+}
+```
