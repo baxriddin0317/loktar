@@ -88,7 +88,7 @@
 </script>
 
 <template>
-  <div class="relative overflow-hidden w-full border border-white/30 rounded-3xl bg-white dark:bg-brand-element-dark p-8">
+  <div class="relative max-w-[445px] overflow-hidden w-full border border-white/30 rounded-3xl bg-white dark:bg-brand-element-dark p-8">
     <span class="hidden dark:block absolute left-4 -top-5 z-0 opacity-80 blur-2xl">
       <svg xmlns="http://www.w3.org/2000/svg" width="396" height="369" viewBox="0 0 396 369" fill="none">
         <g opacity="0.8" filter="url(#filter0_f_1688_7951)">

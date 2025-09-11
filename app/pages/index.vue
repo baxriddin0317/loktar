@@ -1,8 +1,8 @@
 <template>
   <AppHero />
   <section class="mt-8 md:mt-20">
-    <div class="relative">
-      <span class="absolute -right-24 bottom-0 bg-transparent">
+    <div class="relative max-w-vw mx-auto w-full h-full">
+      <span class="absolute -right-0  bottom-0">
         <svg xmlns="http://www.w3.org/2000/svg" width="975" height="29" viewBox="0 0 975 29" fill="none">
           <path d="M1017 0.99999L242.936 0.999989L215.094 28L1 28" stroke="url(#paint0_radial_1688_24293)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
           <defs>
@@ -13,7 +13,7 @@
           </defs>
         </svg>
       </span>
-      <span class="absolute -left-40 top-4 bg-transparent">
+      <span class="absolute -left-0 -translate-x-[258px] top-4">
         <svg xmlns="http://www.w3.org/2000/svg" width="1161" height="72" viewBox="0 0 1161 72" fill="none">
           <path d="M1160.5 11.6207L530.108 11.6207L479.029 11.6207L189 11.6207L162.5 71L-29.7133 71L-99.3711 1L-402 1" stroke="url(#paint0_radial_1688_24292)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
           <defs>
@@ -33,7 +33,7 @@
         </span>
       </div>
     </div>
-    <div class="max-w-8xl w-full mx-auto grid grid-cols-[445px_925px] gap-6 px-5 mt-6">
+    <div class="max-w-8xl w-full mx-auto flex items-start gap-6 px-5 mt-6">
       <AppFilter />
       <AppTabs />
     </div>
