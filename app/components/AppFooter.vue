@@ -34,7 +34,7 @@
       <h3 class="font-exo font-medium text-white text-[32px] tracking-[-0.32px] leading-[140%]">
         Зарегистрируйтесь
       </h3>
-      <p class="font-exo leading-[140%] opacity-70 mt-2">
+      <p class="font-exo leading-[140%] text-white dark:opacity-70 mt-2">
         чтобы получить доступ к контактам таргетологов и агентств
       </p>
       <button class="w-52 mx-auto mt-7 flex items-center justify-center bg-brand-main-2 text-brand-primary-3 border border-brand-main-2 h-14 rounded-lg cursor-pointer">
