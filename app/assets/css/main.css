@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
+@import "@nuxt/ui";
 
 @variant dark (.dark &);
 
@@ -10,10 +11,24 @@
   --color-brand-black: #001324;
 
   --color-brand-main: #1F2122;
+  --color-brand-main-2: #45E4BF;
+  
+  --color-brand-element-dark: #00203A;
+  --color-brand-footer-light: #00203A;
+  --color-brand-light-primary: #23212B;
+  --color-brand-primary-1: #001A30;
+  --color-brand-primary-2: #193044;
+  --color-brand-primary-3: #0A0813;
+  --color-brand-gray-1: #92909A;
+  --color-brand-gray-2: #F5F6F8;
 
   --font-exo: "Exo 2", sans-serif;
   --font-inter: "Inter", sans-serif;
 
   /* brackpoints */
   --spacing-8xl: 1440px;
+}
+
+body {
+  @apply font-inter
 }

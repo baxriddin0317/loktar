@@ -1,8 +1,8 @@
 <template>
-  <header class="relative max-w-8xl h-[336px] mx-auto px-5 pt-6">
+  <header class=" max-w-8xl w-full h-[336px] mx-auto px-5 pt-6">
     <!-- Background images -->
-    <img src="/header-bg.png" alt="Header background" class="absolute inset-0 w-full h-full object-cover z-0 hidden dark:block" />
-    <img src="/header-bg-dark.png" alt="Header background dark" class="absolute inset-0 w-full h-full object-cover z-0  dark:hidden" />
+    <img src="/header-bg.png" alt="Header background" class="absolute inset-0 w-full h-[336px] object-cover z-0 hidden dark:block" />
+    <img src="/header-bg-dark.png" alt="Header background dark" class="absolute inset-0 w-full h-[336px] object-cover z-0  dark:hidden" />
     
     <div class="flex items-center justify-between relative z-10">
       <div>
@@ -26,12 +26,8 @@
       </div>
     </div>
 
-    <div class="relative flex gap-12 flex-col items-center justify-center z-10">
-      <img class="hidden dark:block" src="/logo_bw.png" alt="">
-      <img class="dark:hidden" src="/logo_bw-dark.png" alt="">
-      <p class="text-[56px] font-medium text-center text-brand-main leading-[120%] font-exo dark:text-white">
-        Рейтинг по открученному <br> бюджету во ВКонтакте
-      </p>
+    <div class="relative flex flex-col items-center justify-center z-10">
+      <Logo :width="78" :height="79" />
     </div>
   </header>
 </template>
