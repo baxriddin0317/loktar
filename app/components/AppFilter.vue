@@ -178,7 +178,7 @@
           <URadioGroup v-model="value" :items="items" class="[&>fieldset]:space-y-3 mt-6" indicator="hidden" variant="list">
             <template #label="{ item, modelValue }">
               <div class="flex items-center justify-between w-full cursor-pointer transition">
-                <span class="font-inter text-brand-light-primary dark:text-white dark:!bg-transparent leading-[120%]" :class="{ 'opacity-50': modelValue !== ((item as any).value ?? item) }">{{ (item as any).label ?? item }}</span>
+                <span class="font-inter text-left text-brand-light-primary dark:text-white dark:!bg-transparent leading-[120%]" :class="{ 'opacity-50': modelValue !== ((item as any).value ?? item) }">{{ (item as any).label ?? item }}</span>
   
                 <span v-if="modelValue === ((item as any).value ?? item)" class="flex items-center justify-center size-6 rounded-full bg-[#11E5B3] [&>svg>path]:fill-white">
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">

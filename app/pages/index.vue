@@ -24,7 +24,7 @@
           </defs>
         </svg>
       </span>
-      <div class="max-w-8xl mx-auto px-5 flex items-center justify-end gap-2">
+      <div class="relative z-10 max-w-8xl mx-auto px-5 flex items-center justify-end gap-2">
         <p class="text-brand-main dark:text-brand-gray-1 text-sm leading-[120%]">Как рассчитывается рейтинг</p>
         <span>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
