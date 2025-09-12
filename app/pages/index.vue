@@ -2,7 +2,7 @@
   <AppHero />
   <section class="mt-8 md:mt-20">
     <div class="relative max-w-vw mx-auto w-full h-full">
-      <span class="absolute -right-0  bottom-0">
+      <span class="absolute dark:!bg-transparent -right-0  bottom-0">
         <svg xmlns="http://www.w3.org/2000/svg" width="975" height="29" viewBox="0 0 975 29" fill="none">
           <path d="M1017 0.99999L242.936 0.999989L215.094 28L1 28" stroke="url(#paint0_radial_1688_24293)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
           <defs>

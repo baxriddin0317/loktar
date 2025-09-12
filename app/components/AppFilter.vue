@@ -89,7 +89,7 @@
 
 <template>
   <div class="relative max-w-[445px] overflow-hidden w-full border border-white/30 rounded-3xl bg-white dark:bg-brand-element-dark p-8">
-    <span class="hidden dark:block absolute left-4 -top-5 z-0 opacity-80 blur-2xl">
+    <span class="hidden dark:block dark:!bg-transparent absolute left-4 -top-5 z-0 opacity-80 blur-2xl">
       <svg xmlns="http://www.w3.org/2000/svg" width="396" height="369" viewBox="0 0 396 369" fill="none">
         <g opacity="0.8" filter="url(#filter0_f_1688_7951)">
           <ellipse cx="98.5" cy="106" rx="97.5" ry="63" fill="#11E5B3"/>
@@ -103,7 +103,7 @@
         </defs>
       </svg>
     </span>
-    <span class="hidden dark:block absolute left-0 top-0 z-0">
+    <span class="hidden dark:block dark:!bg-transparent absolute left-0 top-0 z-0">
       <svg xmlns="http://www.w3.org/2000/svg" width="451" height="848" viewBox="0 0 451 848" fill="none">
         <g filter="url(#filter0_f_1688_7950)">
           <path d="M1029 59.5C1029 240.926 639.712 388 159.5 388C-320.712 388 -710 240.926 -710 59.5C-710 -121.926 -320.712 -269 159.5 -269C639.712 -269 1029 -121.926 1029 59.5Z" fill="url(#paint0_radial_1688_7950)" fill-opacity="0.2"/>
@@ -141,7 +141,7 @@
           <div class="flex items-center gap-4 mt-6">
             <!-- Min input -->
             <label class="flex items-center gap-3 w-full max-w-[380px] h-12 rounded-lg border border-brand-primary-2 bg-white/5 dark:bg-transparent px-5">
-              <span class="text-brand-light-primary dark:text-white font-semibold">₽</span>
+              <span class="text-brand-light-primary dark:text-white dark:!bg-transparent font-semibold">₽</span>
               <input
                 v-model="minInput"
                 @blur="applyMin"
@@ -157,7 +157,7 @@
   
             <!-- Max input -->
             <label class="flex items-center gap-3 w-full max-w-[380px] h-12 rounded-lg border border-brand-primary-2 bg-white/5 dark:bg-transparent px-5">
-              <span class="text-brand-light-primary dark:text-white font-semibold">₽</span>
+              <span class="text-brand-light-primary dark:text-white dark:!bg-transparent font-semibold">₽</span>
               <input
                 v-model="maxInput"
                 @blur="applyMax"
@@ -178,7 +178,7 @@
           <URadioGroup v-model="value" :items="items" class="[&>fieldset]:space-y-3 mt-6" indicator="hidden" variant="list">
             <template #label="{ item, modelValue }">
               <div class="flex items-center justify-between w-full cursor-pointer transition">
-                <span class="font-inter text-brand-light-primary dark:text-white leading-[120%]" :class="{ 'opacity-50': modelValue !== ((item as any).value ?? item) }">{{ (item as any).label ?? item }}</span>
+                <span class="font-inter text-brand-light-primary dark:text-white dark:!bg-transparent leading-[120%]" :class="{ 'opacity-50': modelValue !== ((item as any).value ?? item) }">{{ (item as any).label ?? item }}</span>
   
                 <span v-if="modelValue === ((item as any).value ?? item)" class="flex items-center justify-center size-6 rounded-full bg-[#11E5B3] [&>svg>path]:fill-white">
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
@@ -204,7 +204,7 @@
               searchable
               searchable-placeholder="Поиск"
               placeholder="Выберите нишу"
-              class="w-full h-12 bg-transparent !border-brand-primary-2 outline-none text-sm leading-[120%] text-white placeholder:text-white/60"
+              class="w-full h-12 !bg-transparent !border-brand-primary-2 outline-none text-sm leading-[120%] text-white placeholder:text-white/60 [&>span]:dark:!bg-transparent"
             />
           </div>
           <!-- Бюджет в нише -->
@@ -222,14 +222,14 @@
             <div class="flex items-center gap-4 mt-6">
               <!-- Min input -->
               <label class="flex items-center gap-3 w-full max-w-[380px] h-12 rounded-lg border border-brand-primary-2 bg-white/5 dark:bg-transparent px-5">
-                <span class="text-brand-light-primary dark:text-white font-semibold">₽</span>
+                <span class="text-brand-light-primary dark:text-white dark:!bg-transparent font-semibold">₽</span>
                 <input
                   v-model="nicheMinInput"
                   @blur="applyNicheMin"
                   @keyup.enter="applyNicheMin"
                   @focus="$event.target && ($event.target as HTMLInputElement).select()"
                   inputmode="numeric"
-                  class="w-full bg-transparent outline-none text-sm leading-[120%] text-brand-light-primary dark:text-white placeholder:text-brand-light-primary/50 dark:placeholder:text-white/60"
+                  class="w-full bg-transparent outline-none text-sm leading-[120%] text-brand-light-primary dark:text-white placeholder:text-brand-light-primary/50 dark:placeholder:text-white/60 "
                   placeholder="0"
                 />
               </label>
@@ -238,7 +238,7 @@
     
               <!-- Max input -->
               <label class="flex items-center gap-3 w-full max-w-[380px] h-12 rounded-lg border border-brand-primary-2 bg-white/5 dark:bg-transparent px-5">
-                <span class="text-brand-light-primary dark:text-white text-lg font-semibold">₽</span>
+                <span class="text-brand-light-primary dark:text-white dark:!bg-transparent text-lg font-semibold">₽</span>
                 <input
                   v-model="nicheMaxInput"
                   @blur="applyNicheMax"
