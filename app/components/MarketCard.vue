@@ -48,8 +48,8 @@
             <span class="absolute text-xs xlg:text-base text-brand-green font-bold" :class="scoreStroke">{{ scoreValue }}</span>
           </div>
           <div>
-            <p class="dark:opacity-35 text-xs opacity-80 xlg:text-sm" :class="textClass">Топ-ниша:</p>
-            <p class="text-xs" :class="textClass">{{ nicheName }}</p>
+            <p class="dark:opacity-35 !text-white xlg:text-brand-main text-xs opacity-80 xlg:text-sm" :class="textClass">Топ-ниша:</p>
+            <p class="text-xs !text-white xlg:text-brand-main" :class="textClass">{{ nicheName }}</p>
           </div>
         </div>
       </div>
