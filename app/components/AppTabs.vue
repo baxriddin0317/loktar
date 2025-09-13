@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div class=" flex-1 w-full">
     <!-- Tab triggers -->
     <div class="flex gap-2 mb-4">
       <button
