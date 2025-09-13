@@ -8,10 +8,35 @@
       <NuxtPage />
     </main>
     <AppFooter />
+    
+    <!-- Mobile Filter Modal -->
+    <MobileFilterModal 
+      :is-open="isMobileFilterOpen" 
+      @close="closeMobileFilter" 
+    />
   </div>
 </template>
 
 <script setup>
+import { ref, provide } from 'vue'
+import MobileFilterModal from '~/components/MobileFilterModal.vue'
+
 const themeStore = useThemeStore()
+
+// Mobile filter modal state
+const isMobileFilterOpen = ref(false)
+
+// Open mobile filter modal
+const openMobileFilter = () => {
+  isMobileFilterOpen.value = true
+}
+
+// Close mobile filter modal
+const closeMobileFilter = () => {
+  isMobileFilterOpen.value = false
+}
+
+// Provide functions to child components
+provide('openMobileFilter', openMobileFilter)
 </script>
 

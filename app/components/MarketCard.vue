@@ -3,8 +3,8 @@
     class="relative w-full rounded-2xl overflow-hidden border border-transparent dark:border-brand-primary-1 text-brand-main"
     :class="bgClass"
   >
-    <div class="flex items-center gap-6 p-4 md:px-5 md:py-5 leading-[120%]">
-      <div class="flex items-stretch gap-4">
+    <div class="flex flex-col xlg:flex-row flex-wrap xlg:items-center gap-3 xlg:gap-6 p-4 xlg:px-5 xlg:py-5 leading-[120%]">
+      <div class="flex items-stretch gap-3 xlg:gap-4">
         <img
           v-if="avatarUrl"
           :src="avatarUrl"
@@ -18,39 +18,42 @@
         </div>
   
         <div class="flex-1 w-[280px]">
-          <p class="font-inter text-lg" :class="textClass">{{ displayName }}</p>
-          <p class="text-3xl font-medium" :class="textClass">{{ formattedAmount }}</p>
+          <p class="font-inter text-sm md:text-lg" :class="textClass">{{ displayName }}</p>
+          <p class="text-2xl md:text-3xl font-medium" :class="textClass">{{ formattedAmount }}</p>
         </div>
       </div>
 
-      <div class="">
-        <p class="dark:opacity-35 opacity-80 text-sm" :class="textClass">Кол-во лидов:</p>
-        <p :class="textClass">{{ formattedLeads }}</p>
-      </div>
-      <div class="w-px h-12 bg-white/10"></div>
-      <div class="flex items-center gap-3">
-        <div class="relative h-12 w-12 grid place-items-center">
-          <svg viewBox="0 0 48 48" class="h-12 w-12 -rotate-90">
-            <circle cx="24" cy="24" r="20" stroke="currentColor" class="text-white/20 dark:!stroke-[#033648]" stroke-width="4" fill="none" />
-            <circle
-              cx="24"
-              cy="24"
-              r="20"
-              :class="scoreStroke"
-              stroke-width="5"
-              fill="none"
-              :stroke-dasharray="circumference"
-              :stroke-dashoffset="dashOffset"
-              stroke-linecap="round"
-            />
-          </svg>
-          <span class="absolute text-brand-green font-bold" :class="scoreStroke">{{ scoreValue }}</span>
+      <div class="flex xlg:flex-wrap flex-row-reverse xlg:flex-row justify-end xlg:justify-start items-center gap-3 xlg:gap-6 border-t border-white/10 xlg:border-t-0 pt-3 xlg:pt-0">
+        <div class="">
+          <p class="dark:opacity-35 opacity-80 text-sm" :class="textClass">Кол-во лидов:</p>
+          <p :class="textClass">{{ formattedLeads }}</p>
         </div>
-        <div>
-          <p class="dark:opacity-35 opacity-80 text-sm" :class="textClass">Топ-ниша:</p>
-          <p :class="textClass">{{ nicheName }}</p>
+        <div class="hidden xlg:block w-px h-12 bg-white/10"></div>
+        <div class="flex-1 flex items-center gap-2.5 d:gap-3 max-w-[55%] w-full xlg:w-auto bg-brand-black xlg:bg-transparent rounded-lg py-2.5 pl-3 xlg:p-0">
+          <div class="relative h-12 w-12 grid place-items-center">
+            <svg viewBox="0 0 48 48" class="h-8 w-8 md:h-12 md:w-12 -rotate-90">
+              <circle cx="24" cy="24" r="20" stroke="currentColor" class="text-white/20 dark:!stroke-[#033648]" stroke-width="4" fill="none" />
+              <circle
+                cx="24"
+                cy="24"
+                r="20"
+                :class="scoreStroke"
+                stroke-width="5"
+                fill="none"
+                :stroke-dasharray="circumference"
+                :stroke-dashoffset="dashOffset"
+                stroke-linecap="round"
+              />
+            </svg>
+            <span class="absolute text-xs xlg:text-base text-brand-green font-bold" :class="scoreStroke">{{ scoreValue }}</span>
+          </div>
+          <div>
+            <p class="dark:opacity-35 text-xs opacity-80 xlg:text-sm" :class="textClass">Топ-ниша:</p>
+            <p class="text-xs" :class="textClass">{{ nicheName }}</p>
+          </div>
         </div>
       </div>
+
     </div>
 
     <div class="absolute right-3 top-3">

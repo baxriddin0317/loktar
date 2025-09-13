@@ -28,8 +28,13 @@
 
   /* brackpoints */
   --spacing-8xl: 1440px;
+  --breakpoint-xlg: 860px;
 }
 
 body {
   @apply font-inter
+}
+
+.menu-scroll::-webkit-scrollbar{
+  @apply w-0
 }

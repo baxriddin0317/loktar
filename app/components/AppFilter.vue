@@ -88,7 +88,7 @@
 </script>
 
 <template>
-  <div class="relative max-w-[445px] overflow-hidden w-full border border-white/30 rounded-3xl bg-white dark:bg-brand-element-dark p-8">
+  <div class="relative lg:max-w-[445px] overflow-hidden w-full border border-white/30 rounded-3xl bg-white dark:bg-brand-element-dark px-3 lg:px-7 py-8 xl:p-8">
     <span class="hidden dark:block dark:!bg-transparent absolute left-4 -top-5 z-0 opacity-80 blur-2xl">
       <svg xmlns="http://www.w3.org/2000/svg" width="396" height="369" viewBox="0 0 396 369" fill="none">
         <g opacity="0.8" filter="url(#filter0_f_1688_7951)">
@@ -128,7 +128,7 @@
       <div class="flex flex-col gap-3">
         <!-- Бюджет общий  -->
         <div class="bg-brand-gray-2 dark:bg-brand-primary-1 p-4 lg:p-5 rounded-xl">
-          <h3 class="text-lg font-semibold font-inter leading-[130%] text-brand-light-primary dark:text-white">
+          <h3 class="lg:text-lg font-semibold font-inter leading-[130%] text-brand-light-primary dark:text-white">
             Бюджет общий
           </h3>
           <div class="mt-6">
@@ -172,7 +172,7 @@
         </div>
         <!-- Период -->
         <div class="bg-brand-gray-2 dark:bg-brand-primary-1 p-4 lg:p-5 rounded-xl">
-          <h3 class="text-lg font-semibold font-inter leading-[130%] text-brand-light-primary dark:text-white">
+          <h3 class="lg:text-lg font-semibold font-inter leading-[130%] text-brand-light-primary dark:text-white">
             Период
           </h3>
           <URadioGroup v-model="value" :items="items" class="[&>fieldset]:space-y-3 mt-6" indicator="hidden" variant="list">
@@ -192,7 +192,7 @@
         </div>
         <!-- Ниша -->
         <div class="bg-brand-gray-2 dark:bg-brand-primary-1 p-4 lg:p-5 rounded-xl">
-          <h3 class="text-lg font-semibold font-inter leading-[130%] text-brand-light-primary dark:text-white">
+          <h3 class="lg:text-lg font-semibold font-inter leading-[130%] text-brand-light-primary dark:text-white">
             Ниша
           </h3>
           <div class="mt-4 pb-6 border-b border-white/10">
@@ -209,7 +209,7 @@
           </div>
           <!-- Бюджет в нише -->
           <div class="mt-6">
-            <h3 class="text-lg font-semibold font-inter leading-[130%] text-brand-light-primary dark:text-white">
+            <h3 class="lg:text-lg font-semibold font-inter leading-[130%] text-brand-light-primary dark:text-white">
               Бюджет в нише
             </h3>
             <div class="mt-6">
