@@ -19,7 +19,7 @@
   
         <div class="flex-1 w-[280px]">
           <p class="font-inter text-sm md:text-lg" :class="textClass">{{ displayName }}</p>
-          <p class="text-2xl md:text-3xl font-medium" :class="textClass">{{ formattedAmount }}</p>
+          <p class="text-2xl font-exo md:text-3xl font-medium" :class="textClass">{{ formattedAmount }}</p>
         </div>
       </div>
 
@@ -29,7 +29,7 @@
           <p :class="textClass">{{ formattedLeads }}</p>
         </div>
         <div class="hidden xlg:block w-px h-12 bg-white/10"></div>
-        <div class="flex-1 flex items-center gap-2.5 d:gap-3 max-w-[55%] w-full xlg:w-auto bg-brand-black xlg:bg-transparent rounded-lg py-2.5 pl-3 xlg:p-0">
+        <div class="flex-1 flex items-center gap-2.5 d:gap-3 max-w-[55%] w-full xlg:w-auto bg-brand-black xlg:bg-transparent rounded-lg py-2.5 pl-3 pr-2 xlg:p-0">
           <div class="relative h-12 w-12 grid place-items-center">
             <svg viewBox="0 0 48 48" class="h-8 w-8 md:h-12 md:w-12 -rotate-90">
               <circle cx="24" cy="24" r="20" stroke="currentColor" class="text-white/20 dark:!stroke-[#033648]" stroke-width="4" fill="none" />

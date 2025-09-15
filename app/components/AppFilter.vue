@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import type { RadioGroupItem, RadioGroupValue } from '@nuxt/ui'
-  import { ref } from 'vue'
+  import { ref, watch } from 'vue'
 
   const items = ref<RadioGroupItem[]>([
     { label: 'За прошлую неделю', value: 'week' },
@@ -133,14 +133,14 @@
           </h3>
           <div class="mt-6">
             <div class="flex items-center justify-between mb-4">
-              <p class="font-inter text-brand-gray-1 text-sm leading-[140%]">{{ totalBudjet[0] }}₽</p>
-              <p class="font-inter text-brand-gray-1 text-sm leading-[140%]">{{ totalBudjet[1] }}₽</p>
+              <p class="font-inter text-brand-gray-1 text-sm leading-[140%]">{{ formatCurrency(totalBudjet[0]) }} ₽</p>
+              <p class="font-inter text-brand-gray-1 text-sm leading-[140%]">{{ formatCurrency(totalBudjet[1]) }} ₽</p>
             </div>
             <USlider class="custom" :min="5000" :max="1500000" v-model="totalBudjet" />
           </div>
           <div class="flex items-center gap-4 mt-6">
             <!-- Min input -->
-            <label class="flex items-center gap-3 w-full max-w-[380px] h-12 rounded-lg border border-brand-primary-2 bg-white/5 dark:bg-transparent px-5">
+            <label class="flex items-center gap-3 w-full max-w-[380px] h-12 rounded-lg border border-brand-gray-3 dark:border-brand-primary-2 bg-white/5 dark:bg-transparent px-5">
               <span class="text-brand-light-primary dark:text-white dark:!bg-transparent font-semibold">₽</span>
               <input
                 v-model="minInput"
@@ -156,7 +156,7 @@
             <span class="text-brand-light-primary dark:text-white/70 text-2xl">-</span>
   
             <!-- Max input -->
-            <label class="flex items-center gap-3 w-full max-w-[380px] h-12 rounded-lg border border-brand-primary-2 bg-white/5 dark:bg-transparent px-5">
+            <label class="flex items-center gap-3 w-full max-w-[380px] h-12 rounded-lg border border-brand-gray-3 dark:border-brand-primary-2 bg-white/5 dark:bg-transparent px-5">
               <span class="text-brand-light-primary dark:text-white dark:!bg-transparent font-semibold">₽</span>
               <input
                 v-model="maxInput"
@@ -204,7 +204,7 @@
               searchable
               searchable-placeholder="Поиск"
               placeholder="Выберите нишу"
-              class="w-full h-12 !bg-transparent !border-brand-primary-2 outline-none text-sm leading-[120%] text-white placeholder:text-white/60 [&>span]:dark:!bg-transparent"
+              class="w-full h-12 !bg-transparent !ring-brand-primary-2 outline-none text-sm leading-[120%] text-white placeholder:text-white/60 [&>span]:dark:!bg-transparent"
             />
           </div>
           <!-- Бюджет в нише -->
@@ -214,14 +214,14 @@
             </h3>
             <div class="mt-6">
               <div class="flex items-center justify-between mb-4">
-                <p class="font-inter text-brand-gray-1 text-sm leading-[140%]">{{ nicheBudget[0] }}₽</p>
-                <p class="font-inter text-brand-gray-1 text-sm leading-[140%]">{{ nicheBudget[1] }}₽</p>
+                <p class="font-inter text-brand-gray-1 text-sm leading-[140%]">{{ formatCurrency(nicheBudget[0]) }} ₽</p>
+                <p class="font-inter text-brand-gray-1 text-sm leading-[140%]">{{ formatCurrency(nicheBudget[1]) }} ₽</p>
               </div>
               <USlider class="custom" :min="5000" :max="1500000" v-model="nicheBudget" />
             </div>
             <div class="flex items-center gap-4 mt-6">
               <!-- Min input -->
-              <label class="flex items-center gap-3 w-full max-w-[380px] h-12 rounded-lg border border-brand-primary-2 bg-white/5 dark:bg-transparent px-5">
+              <label class="flex items-center gap-3 w-full max-w-[380px] h-12 rounded-lg border border-brand-gray-3 dark:border-brand-primary-2 bg-white/5 dark:bg-transparent px-5">
                 <span class="text-brand-light-primary dark:text-white dark:!bg-transparent font-semibold">₽</span>
                 <input
                   v-model="nicheMinInput"
@@ -237,7 +237,7 @@
               <span class="text-brand-light-primary dark:text-white/70 text-2xl">-</span>
     
               <!-- Max input -->
-              <label class="flex items-center gap-3 w-full max-w-[380px] h-12 rounded-lg border border-brand-primary-2 bg-white/5 dark:bg-transparent px-5">
+              <label class="flex items-center gap-3 w-full max-w-[380px] h-12 rounded-lg border border-brand-gray-3 dark:border-brand-primary-2 bg-white/5 dark:bg-transparent px-5">
                 <span class="text-brand-light-primary dark:text-white dark:!bg-transparent text-lg font-semibold">₽</span>
                 <input
                   v-model="nicheMaxInput"
@@ -258,7 +258,7 @@
         <button class="w-full flex items-center justify-center text-brand-main dark:text-brand-main-2 border border-brand-main dark:border-brand-main-2 h-14 rounded-lg cursor-pointer">
           Очистить
         </button>
-        <button class="w-full flex items-center justify-center bg-brand-main-2 text-brand-primary-3 border border-brand-main-2 h-14 rounded-lg cursor-pointer">
+        <button class="w-full flex items-center justify-center bg-brand-main-2 text-white dark:text-brand-primary-3 border border-brand-main-2 h-14 rounded-lg cursor-pointer">
           Очистить (21)
         </button>
       </div>

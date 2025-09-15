@@ -30,6 +30,20 @@
         </defs>
       </svg>
     </span>
+    <span class="absolute -top-0 -left-5 bg-transparent">
+      <svg xmlns="http://www.w3.org/2000/svg" width="375" height="226" viewBox="0 0 375 226" fill="none">
+        <g filter="url(#filter0_f_1713_30057)">
+          <path d="M221 15.7455C221 72.5681 202.222 15.7455 114.982 15.7455C27.7418 15.7455 -40 65.709 -40 8.88642C-40 -47.9362 30.7222 -94 117.962 -94C205.203 -94 221 -41.0771 221 15.7455Z" fill="#CF52FE"/>
+        </g>
+        <defs>
+          <filter id="filter0_f_1713_30057" x="-240" y="-294" width="661" height="535" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_1713_30057"/>
+          </filter>
+        </defs>
+      </svg>
+    </span>
     <div class="relative z-10 max-w-4xl mx-auto text-center bg-transparent px-3">
       <h3 class="font-exo font-medium text-white text-[24px] md:text-[32px] tracking-[-0.32px] leading-[140%]">
         Зарегистрируйтесь
@@ -37,7 +51,7 @@
       <p class="font-exo leading-[140%] text-white dark:opacity-70 mt-2">
         чтобы получить доступ к контактам таргетологов и агентств
       </p>
-      <button class="w-52 mx-auto mt-7 flex items-center justify-center bg-brand-main-2 text-brand-primary-3 border border-brand-main-2 h-14 rounded-lg cursor-pointer text-sm">
+      <button class="w-52 mx-auto mt-7 flex items-center justify-center bg-brand-main dark:bg-brand-main-2 text-white dark:text-brand-primary-3 border border-brand-main-2 h-14 rounded-lg cursor-pointer text-sm">
         Зарегистрироваться
       </button>
     </div>

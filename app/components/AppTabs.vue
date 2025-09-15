@@ -1,5 +1,5 @@
 <template>
-  <div class=" flex-1 w-full">
+  <div class="relative z-20 flex-1 w-full">
     <!-- Tab triggers -->
     <div class="flex gap-2 mb-4">
       <button
@@ -7,9 +7,9 @@
         :key="tab.slot"
         @click="activeTab = tab.slot"
         :class="[
-          'w-full rounded-lg border transition-all duration-200 cursor-pointer h-14',
+          'w-full rounded-lg border transition-all duration-200 cursor-pointer h-10  md:h-14',
           activeTab === tab.slot
-            ? 'bg-brand-green dark:bg-[#023038] text-white dark:text-brand-green !border-brand-green'
+            ? 'bg-brand-green-2 dark:bg-[#023038] text-white dark:text-brand-green-2 !border-brand-green-2'
             : 'bg-white dark:bg-transparent text-brand-main dark:text-white/30 border-white/30 hover:border-brand-green/50'
         ]"
       >
@@ -36,25 +36,19 @@
 
       <!-- === -->
       <div class="relative flex items-end justify-start lg:hidden max-w-vw mx-auto w-full h-12 mt-6 overflow-x-hidden overflow-y-hidden">
-        <span class="absolute -right-4 -top-2 dark:!bg-transparent">
-          <svg xmlns="http://www.w3.org/2000/svg" width="106" height="29" viewBox="0 0 106 29" fill="none">
-            <path d="M953 1.00002L242.936 1.00002L215.094 28L1 28" stroke="url(#paint0_radial_1713_17208)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <span class="absolute max-w-screen flex items-center justify-start overflow-hidden left-0 -top-0.5 dark:!bg-transparent">
+          <svg width="375" height="72" viewBox="0 0 375 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1222 0.999989L511.936 0.999989L484.094 28L270 28" stroke="url(#paint0_radial_5688_3847)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M498.223 37.5L256.174 37.5L212.029 11.6207L-16.5 11.6207L-75.589 71L-296.713 71L-366.371 1L-669 1" stroke="url(#paint1_radial_5688_3847)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
             <defs>
-              <radialGradient id="paint0_radial_1713_17208" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(564.85 14.4702) rotate(-90) scale(388.46 400.571)">
-                <stop offset="0.00094151" stop-color="#9A6CF4"/>
-                <stop offset="1" stop-color="#CF52FE"/>
-              </radialGradient>
-            </defs>
-          </svg>
-        </span>
-        <span class="absolute dark:!bg-transparent -left-4 -top-0">
-          <svg xmlns="http://www.w3.org/2000/svg" width="375" height="72" viewBox="0 0 375 72" fill="none">
-            <path d="M498.223 37.5L256.174 37.5L212.029 11.6207L-16.5 11.6207L-75.589 71L-296.713 71L-366.371 1.00006L-669 1.00006" stroke="url(#paint0_radial_1713_17207)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-            <defs>
-              <radialGradient id="paint0_radial_1713_17207" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(48.9339 36.1183) rotate(-90) scale(297.931 296.474)">
-                <stop offset="0.00094151" stop-color="#CF52FE" stop-opacity="0"/>
-                <stop offset="1" stop-color="#9A3AE0"/>
-              </radialGradient>
+            <radialGradient id="paint0_radial_5688_3847" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(833.85 14.4702) rotate(-90) scale(388.46 400.571)">
+            <stop offset="0.00094151" stop-color="#9A6CF4"/>
+            <stop offset="1" stop-color="#CF52FE"/>
+            </radialGradient>
+            <radialGradient id="paint1_radial_5688_3847" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(48.9339 36.1182) rotate(-90) scale(297.931 296.474)">
+            <stop offset="0.00094151" stop-color="#CF52FE" stop-opacity="0"/>
+            <stop offset="1" stop-color="#9A3AE0"/>
+            </radialGradient>
             </defs>
           </svg>
         </span>
@@ -86,6 +80,7 @@
         agencies
       </div>
     </div>
+
   </div>
 </template>
 
