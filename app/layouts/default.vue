@@ -14,17 +14,25 @@
       :is-open="isMobileFilterOpen" 
       @close="closeMobileFilter" 
     />
+
+    <!-- Rating Info Modal (global) -->
+    <RatingInfoModal 
+      :is-open="isRatingInfoOpen" 
+      @close="closeRatingInfo" 
+    />
   </div>
 </template>
 
 <script setup>
 import { ref, provide } from 'vue'
 import MobileFilterModal from '~/components/MobileFilterModal.vue'
+import RatingInfoModal from '~/components/RatingInfoModal.vue'
 
 const themeStore = useThemeStore()
 
 // Mobile filter modal state
 const isMobileFilterOpen = ref(false)
+const isRatingInfoOpen = ref(false)
 
 // Open mobile filter modal
 const openMobileFilter = () => {
@@ -36,7 +44,16 @@ const closeMobileFilter = () => {
   isMobileFilterOpen.value = false
 }
 
+const openRatingInfo = () => {
+  isRatingInfoOpen.value = true
+}
+
+const closeRatingInfo = () => {
+  isRatingInfoOpen.value = false
+}
+
 // Provide functions to child components
 provide('openMobileFilter', openMobileFilter)
+provide('openRatingInfo', openRatingInfo)
 </script>
 

@@ -40,3 +40,7 @@ body {
 .menu-scroll::-webkit-scrollbar{
   @apply w-0
 }
+
+button:hover{
+  opacity: 90%;
+}

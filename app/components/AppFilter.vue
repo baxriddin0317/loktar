@@ -133,8 +133,8 @@
           </h3>
           <div class="mt-6">
             <div class="flex items-center justify-between mb-4">
-              <p class="font-inter text-brand-gray-1 text-sm leading-[140%]">{{ formatCurrency(totalBudjet[0]) }} ₽</p>
-              <p class="font-inter text-brand-gray-1 text-sm leading-[140%]">{{ formatCurrency(totalBudjet[1]) }} ₽</p>
+              <p class="font-inter text-brand-gray-1 text-xs md:text-sm leading-[140%]">{{ formatCurrency(totalBudjet[0]) }} ₽</p>
+              <p class="font-inter text-brand-gray-1 text-xs md:text-sm leading-[140%]">{{ formatCurrency(totalBudjet[1]) }} ₽</p>
             </div>
             <USlider class="custom" :min="5000" :max="1500000" v-model="totalBudjet" />
           </div>
