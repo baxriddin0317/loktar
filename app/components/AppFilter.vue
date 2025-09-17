@@ -88,7 +88,7 @@
 </script>
 
 <template>
-  <div class="relative lg:max-w-[445px] overflow-hidden w-full border border-white/30 rounded-3xl bg-white dark:bg-brand-element-dark px-3 lg:px-7 py-8 xl:p-8">
+  <div class="relative lg:max-w-[445px] overflow-hidden w-full border border-white/30 rounded-3xl bg-[#F5F6F8] md:bg-white dark:bg-brand-element-dark px-3 lg:px-7 py-8 xl:p-8">
     <span class="hidden dark:block dark:!bg-transparent absolute left-4 -top-5 z-0 opacity-80 blur-2xl">
       <svg xmlns="http://www.w3.org/2000/svg" width="396" height="369" viewBox="0 0 396 369" fill="none">
         <g opacity="0.8" filter="url(#filter0_f_1688_7951)">
@@ -204,8 +204,14 @@
               searchable
               searchable-placeholder="Поиск"
               placeholder="Выберите нишу"
-              class="w-full h-12 !bg-transparent !ring-brand-primary-2 outline-none text-sm leading-[120%] text-white placeholder:text-white/60 [&>span]:dark:!bg-transparent"
-            />
+              class="niche-select ring-[#193044] data-[state=open]:ring-brand-green h-12 w-full !bg-transparent outline-none text-sm leading-[120%] text-white placeholder:text-white/60 [&>span]:dark:!bg-transparent"
+            >
+              <template #trailing="{ open }">
+                <svg :class="open ? 'stroke-[#11E5B3] ' : 'stroke-[#334859]'" xmlns="http://www.w3.org/2000/svg" width="13" height="6" viewBox="0 0 13 6" fill="none">
+                  <path d="M12 1L6.55882 4.95722C6.52375 4.98273 6.47625 4.98273 6.44118 4.95722L1 1" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </template>
+            </USelectMenu>
           </div>
           <!-- Бюджет в нише -->
           <div class="mt-6">
