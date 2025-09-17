@@ -20,6 +20,12 @@
       :is-open="isRatingInfoOpen" 
       @close="closeRatingInfo" 
     />
+
+    <!-- Register Modal (global) -->
+    <RegisterModal 
+      :is-open="isRegisterOpen"
+      @close="closeRegister"
+    />
   </div>
 </template>
 
@@ -27,12 +33,14 @@
 import { ref, provide } from 'vue'
 import MobileFilterModal from '~/components/MobileFilterModal.vue'
 import RatingInfoModal from '~/components/RatingInfoModal.vue'
+import RegisterModal from '~/components/RegisterModal.vue'
 
 const themeStore = useThemeStore()
 
 // Mobile filter modal state
 const isMobileFilterOpen = ref(false)
 const isRatingInfoOpen = ref(false)
+const isRegisterOpen = ref(false)
 
 // Open mobile filter modal
 const openMobileFilter = () => {
@@ -52,8 +60,17 @@ const closeRatingInfo = () => {
   isRatingInfoOpen.value = false
 }
 
+const openRegister = () => {
+  isRegisterOpen.value = true
+}
+
+const closeRegister = () => {
+  isRegisterOpen.value = false
+}
+
 // Provide functions to child components
 provide('openMobileFilter', openMobileFilter)
 provide('openRatingInfo', openRatingInfo)
+provide('openRegister', openRegister)
 </script>
 

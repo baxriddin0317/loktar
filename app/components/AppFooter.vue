@@ -51,9 +51,17 @@
       <p class="font-exo leading-[140%] text-white dark:opacity-70 mt-2">
         чтобы получить доступ к контактам таргетологов и агентств
       </p>
-      <button class="w-52 mx-auto mt-7 flex items-center justify-center bg-brand-main dark:bg-brand-main-2 text-white dark:text-brand-primary-3 border border-brand-main-2 h-14 rounded-lg cursor-pointer text-sm">
+      <button @click="onRegisterClick" class="w-52 mx-auto mt-7 flex items-center justify-center bg-brand-main dark:bg-brand-main-2 text-white dark:text-brand-primary-3 border border-brand-main-2 h-14 rounded-lg cursor-pointer text-sm">
         Зарегистрироваться
       </button>
     </div>
   </footer>
 </template>
+
+<script setup lang="ts">
+import { inject } from 'vue'
+const openRegister = inject<() => void>('openRegister')
+const onRegisterClick = () => {
+  if (openRegister) openRegister()
+}
+</script>
